@@ -195,6 +195,28 @@
             }
         }
 
+        @keyframes slideInFromLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-100px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideInFromRight {
+            from {
+                opacity: 0;
+                transform: translateX(100px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
         /* Section Styles */
         section {
             padding: 80px 20px;
@@ -226,11 +248,39 @@
         /* News Section */
         .news {
             background: #fff;
+            text-align: center;
+        }
+
+        .news .section-title {
+            font-size: 48px;
+            color: #000;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .news .section-title .big-letter {
+            font-size: 56px;
+            font-weight: bold;
+            color: #0066cc;
+        }
+
+        .news .section-subtitle {
+            font-size: 14px;
+            color: #333;
+            margin-bottom: 40px;
         }
 
         .news-items {
             margin-bottom: 30px;
-            text-align: center;
+            display: inline-block;
+            text-align: left;
+        }
+
+        .news .btn-view-more {
+            display: block;
+            width: fit-content;
+            margin: 30px auto 0;
+            clear: both;
         }
 
         .news-section-actions {
@@ -240,7 +290,7 @@
 
         .news-item {
             padding: 15px 0;
-            border-bottom: 1px solid #eee;
+            border-bottom: 1px solid #ddd;
             font-size: 16px;
             display: flex;
             align-items: center;
@@ -252,34 +302,39 @@
         .news-item:nth-child(3) { animation-delay: 0.3s; }
 
         .news-item:last-child {
-            border-bottom: none;
+            border-bottom: 1px solid #ddd;
         }
 
         .news-date {
-            color: #666;
-            margin-right: 15px;
+            color: #333;
+            margin-right: 50px;
+            white-space: nowrap;
+            letter-spacing: 2px;
+        }
+
+        .news-item span:last-child {
+            color: #333;
+            letter-spacing: 2px;
         }
 
         .btn-view-more {
             display: inline-block;
-            padding: 12px 30px;
+            padding: 12px 40px;
             background: #fff;
             color: #0066cc;
             text-decoration: none;
-            border: 2px solid #0066cc;
-            border-radius: 5px;
+            border: 1px solid #0066cc;
+            border-radius: 0;
             transition: all 0.3s ease;
             font-size: 14px;
-            font-weight: 500;
-            margin-top: 10px;
+            font-weight: 400;
+            margin-top: 30px;
         }
 
         .btn-view-more:hover {
             background: #ADD8E6;
             border-color: #ADD8E6;
             color: #0066cc;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(173, 216, 230, 0.3);
         }
 
         /* Studio Section */
@@ -289,39 +344,47 @@
             overflow: hidden;
             padding: 80px 40px;
             max-width: 100%;
+            width: 63%;
+        }
+
+        .studio-header {
+            position: relative;
+            overflow: hidden;
+            padding: 10px 0 30px;
+            text-align: center;
         }
 
         .studio-banner {
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
+            inset: 0;
             pointer-events: none;
             z-index: 0;
             display: flex;
             align-items: flex-start;
-            justify-content: center;
-            padding-top: 40px;
+            justify-content: flex-start;
+            padding-top: 0px;
+            padding-left: 20px;
+            --watermark-y: -16px;           /* change this */
+            transform: translateY(var(--watermark-y));
         }
 
         .studio-banner-text {
-            font-size: 85px;
+            font-size: 50px;
             font-weight: 900;
             font-style: normal;
-            color: rgba(255, 255, 255, 0.5);
+            color: rgba(255, 255, 255, 0.55);
             white-space: nowrap;
-            letter-spacing: 20px;
+            letter-spacing: 14px;
             user-select: none;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-            -webkit-text-stroke: 2px rgba(180, 180, 180, 0.6);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            -webkit-text-stroke: 2px rgba(180, 180, 180, 0.55);
         }
 
         .studio-content {
             position: relative;
             z-index: 1;
             text-align: center;
+            background: transparent;
         }
 
         .studio-title {
@@ -329,24 +392,32 @@
             align-items: center;
             justify-content: center;
             gap: 0;
+            background: transparent;
         }
 
         .studio-s {
             color: #0066cc;
             font-weight: bold;
+            background: transparent;
         }
 
         .studio-tudio {
             color: #333;
             font-weight: bold;
+            background: transparent;
+        }
+
+        .section-subtitle {
+            background: transparent;
         }
 
         .studio-description {
             font-size: 14px;
             line-height: 2;
             margin-bottom: 50px;
-            color: #333;
+            color: #000000;
             text-align: center;
+            background: transparent;
         }
 
         .studio-features {
@@ -358,18 +429,30 @@
 
         .feature-item {
             text-align: center;
-            animation: fadeInUp 0.8s ease-out;
             transition: transform 0.3s ease;
+            opacity: 0;
         }
 
         .feature-item:hover {
             transform: translateY(-5px);
         }
 
-        .feature-item:nth-child(1) { animation-delay: 0.1s; }
-        .feature-item:nth-child(2) { animation-delay: 0.2s; }
-        .feature-item:nth-child(3) { animation-delay: 0.3s; }
-        .feature-item:nth-child(4) { animation-delay: 0.4s; }
+        .feature-item:nth-child(1) { 
+            animation: slideInFromLeft 0.8s ease-out forwards;
+            animation-delay: 0.1s; 
+        }
+        .feature-item:nth-child(2) { 
+            animation: slideInFromLeft 0.8s ease-out forwards;
+            animation-delay: 0.2s; 
+        }
+        .feature-item:nth-child(3) { 
+            animation: slideInFromRight 0.8s ease-out forwards;
+            animation-delay: 0.1s; 
+        }
+        .feature-item:nth-child(4) { 
+            animation: slideInFromRight 0.8s ease-out forwards;
+            animation-delay: 0.2s; 
+        }
 
         .feature-icon {
             width: 80px;
@@ -416,16 +499,16 @@
 
         .gallery-item {
             aspect-ratio: 1;
-            background: url('スタジオ案内背景.png') center/cover;
             position: relative;
             overflow: hidden;
             cursor: pointer;
             transition: transform 0.3s, filter 0.3s;
+            filter: grayscale(100%);
         }
 
         .gallery-item:hover {
             transform: scale(1.05);
-            filter: brightness(1.2);
+            filter: grayscale(0%) brightness(1.1);
         }
 
         .gallery-placeholder {
@@ -439,6 +522,12 @@
             font-size: 14px;
         }
 
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
         /* Price & Access Container */
         .price-access-container {
             background-image: url('PRICE・ACCESS背景.png');
@@ -446,9 +535,10 @@
             background-position: center;
             padding: 80px 100px;
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             gap: 60px;
-            max-width: 1400px;
+            width: 63%;
+            max-width: 100%;
             margin: 0 auto;
         }
 
@@ -726,7 +816,7 @@
             font-size: 12px;
             line-height: 1.7;
             margin: 15px 0;
-            color: #333;
+            color: #000000;
         }
 
         .info-details p {
@@ -751,6 +841,8 @@
         footer {
             background: #fff;
             padding: 60px 20px 40px;
+            width: 65%;
+            margin: 0 auto;
         }
 
         .footer-map {
@@ -804,6 +896,83 @@
         .footer-button-subtitle {
             font-size: 14px;
             color: #666;
+        }
+
+        /* Sticky Bottom Bar */
+        .sticky-bottom-bar {
+            position: fixed;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 63%;
+            background: #4a4a4a;
+            padding: 15px 20px;
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+            transition: opacity 0.3s, visibility 0.3s;
+        }
+
+        .sticky-bottom-bar.hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .sticky-btn {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: #fff;
+            border: 1px solid #ccc;
+            padding: 10px 30px;
+            text-decoration: none;
+            color: #7fb3d5;
+            font-size: 16px;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+
+        .sticky-btn:hover {
+            background: #f0f0f0;
+        }
+
+        .sticky-btn-icon {
+            font-size: 20px;
+            color: #999;
+        }
+
+        .sticky-btn-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .sticky-btn-title {
+            font-size: 18px;
+            color: #7fb3d5;
+            font-weight: 500;
+        }
+
+        .sticky-btn-subtitle {
+            font-size: 11px;
+            color: #999;
+        }
+
+        /* Footer CTA container */
+        .footer-cta-container {
+            background: #4a4a4a;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        /* Add padding to body for sticky bar */
+        body {
+            padding-bottom: 80px;
         }
 
         /* Responsive - iPad Air (820px) */
@@ -1261,16 +1430,16 @@
 
     <!-- News Section -->
     <section class="news" id="news">
-        <h2 class="section-title">NEWS</h2>
+        <h2 class="section-title"><span class="big-letter">N</span>EWS</h2>
         <h3 class="section-subtitle">お知らせ</h3>
         <div class="news-items">
             <div class="news-item">
-                <span class="news-date">2025年○月○日</span>
-                <span>テキストテキストテキストテキスト</span>
+                <span class="news-date">2025 年 0 月 0 日</span>
+                <span>テキスト テキスト テキスト テキスト</span>
             </div>
             <div class="news-item">
-                <span class="news-date">2025年○月○日</span>
-                <span>テキストテキストテキストテキスト</span>
+                <span class="news-date">2025 年 0 月 0 日</span>
+                <span>テキスト テキスト テキスト テキスト</span>
             </div>
         </div>
         <a href="#" class="btn-view-more">View more</a>
@@ -1278,12 +1447,16 @@
 
     <!-- Studio Section -->
     <section class="studio" id="studio">
-        <div class="studio-banner">
-            <div class="studio-banner-text">Studio LiVS&nbsp;&nbsp;&nbsp;Studio LiVS&nbsp;&nbsp;&nbsp;Studio LiVS</div>
+        <div class="studio-header">
+            <div class="studio-banner">
+                <div class="studio-banner-text">Studio LiVS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Studio LiVS</div>
+            </div>
+            <div class="studio-content">
+                <h2 class="section-title studio-title"><span class="studio-s">S</span><span class="studio-tudio">TUDIO</span></h2>
+                <h3 class="section-subtitle">スタジオ案内</h3>
+            </div>
         </div>
         <div class="studio-content">
-            <h2 class="section-title studio-title"><span class="studio-s">S</span><span class="studio-tudio">TUDIO</span></h2>
-            <h3 class="section-subtitle">スタジオ案内</h3>
             <p class="studio-description">
                 スタディオ・リヴス－那覇新都心で 24 時間 365 日営業中－<br>
                 モノレール古島駅から徒歩 2 分、古島交差点すぐそば。<br>
@@ -1320,22 +1493,22 @@
             </div>
         <div class="studio-gallery">
             <div class="gallery-item">
-                <div class="gallery-placeholder">画像1</div>
+                <img src="スタジオ案内背景.png" alt="画像1">
             </div>
             <div class="gallery-item">
-                <div class="gallery-placeholder">画像2</div>
+                <img src="スタジオ案内背景.png" alt="画像2">
             </div>
             <div class="gallery-item">
-                <div class="gallery-placeholder">画像3</div>
+                <img src="スタジオ案内背景.png" alt="画像3">
             </div>
             <div class="gallery-item">
-                <div class="gallery-placeholder">画像4</div>
+                <img src="スタジオ案内背景.png" alt="画像4">
             </div>
             <div class="gallery-item">
-                <div class="gallery-placeholder">画像5</div>
+                <img src="スタジオ案内背景.png" alt="画像5">
             </div>
             <div class="gallery-item">
-                <div class="gallery-placeholder">画像6</div>
+                <img src="スタジオ案内背景.png" alt="画像6">
             </div>
         </div>
         <a href="#" class="btn-view-more">View more</a>
@@ -1441,21 +1614,60 @@
     <!-- Footer -->
     <footer id="contact">
         <div class="footer-map">GoogleMAP</div>
-        <div class="footer-buttons">
-            <a href="tel:080-3964-9023" class="footer-button">
-                <div class="footer-button-icon">📞</div>
-                <div class="footer-button-title">080-3964-9023</div>
-                <div class="footer-button-subtitle">受付時間: 12時-24時</div>
+        <div class="footer-cta-container">
+            <a href="tel:080-3964-9023" class="sticky-btn">
+                <span class="sticky-btn-icon">📱</span>
+                <div class="sticky-btn-content">
+                    <span class="sticky-btn-title">080-3964-9023</span>
+                    <span class="sticky-btn-subtitle">受付時間 12時-24時</span>
+                </div>
             </a>
-            <a href="#" class="footer-button">
-                <div class="footer-button-icon">📅</div>
-                <div class="footer-button-title">WEB予約</div>
-                <div class="footer-button-subtitle">24時間受付</div>
+            <a href="#" class="sticky-btn">
+                <span class="sticky-btn-icon">📅</span>
+                <div class="sticky-btn-content">
+                    <span class="sticky-btn-title">WEB予約</span>
+                    <span class="sticky-btn-subtitle">24時間受付</span>
+                </div>
             </a>
         </div>
     </footer>
 
+    <!-- Sticky Bottom Bar -->
+    <div class="sticky-bottom-bar" id="stickyBar">
+        <a href="tel:080-3964-9023" class="sticky-btn">
+            <span class="sticky-btn-icon">📱</span>
+            <div class="sticky-btn-content">
+                <span class="sticky-btn-title">080-3964-9023</span>
+                <span class="sticky-btn-subtitle">受付時間 12時-24時</span>
+            </div>
+        </a>
+        <a href="#" class="sticky-btn">
+            <span class="sticky-btn-icon">📅</span>
+            <div class="sticky-btn-content">
+                <span class="sticky-btn-title">WEB予約</span>
+                <span class="sticky-btn-subtitle">24時間受付</span>
+            </div>
+        </a>
+    </div>
+
     <script>
+        // Sticky bar hide on footer visible
+        function handleStickyBar() {
+            const stickyBar = document.getElementById('stickyBar');
+            const footer = document.getElementById('contact');
+            if (stickyBar && footer) {
+                const footerRect = footer.getBoundingClientRect();
+                const windowHeight = window.innerHeight;
+                if (footerRect.top < windowHeight) {
+                    stickyBar.classList.add('hidden');
+                } else {
+                    stickyBar.classList.remove('hidden');
+                }
+            }
+        }
+        window.addEventListener('scroll', handleStickyBar);
+        window.addEventListener('load', handleStickyBar);
+
         // Hamburger menu toggle
         function toggleMenu() {
             const navbar = document.getElementById('navbar');
@@ -1525,11 +1737,11 @@
         document.querySelectorAll('.gallery-item').forEach(item => {
             item.addEventListener('mouseenter', function() {
                 this.style.transform = 'scale(1.05)';
-                this.style.filter = 'brightness(1.2)';
+                this.style.filter = 'grayscale(0%) brightness(1.1)';
             });
             item.addEventListener('mouseleave', function() {
                 this.style.transform = 'scale(1)';
-                this.style.filter = 'brightness(1)';
+                this.style.filter = 'grayscale(100%)';
             });
         });
 
