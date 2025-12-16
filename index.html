@@ -140,23 +140,29 @@
 
         .hero-overlay {
             position: absolute;
-            left: 0;
-            top: 0;
-            height: 100%;
+            left: 225px;
+            top: 0%;
+            height: 85%;
             background: rgba(0, 0, 0, 0.9);
             color: #fff;
-            padding: 50px 60px;
+            padding: 30px 28px;
             writing-mode: vertical-rl;
             text-orientation: upright;
-            font-size: 32px;
+            font-size: 24px;
             font-weight: 900;
-            letter-spacing: 10px;
+            letter-spacing: 4px;
             z-index: 10;
             display: flex;
             align-items: center;
             justify-content: center;
-            min-width: 140px;
+            min-width: 65px;
             font-family: 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+            line-height: 1.2;
+        }
+
+        .hero-overlay .horizontal-text {
+            text-combine-upright: all;
+            text-orientation: upright;
         }
 
         /* Animations */
@@ -1250,7 +1256,7 @@
     <!-- Hero Section -->
     <section class="hero" id="home">
         <img src="FV写真.png" alt="Studio LiVS Drums" class="hero-image">
-        <div class="hero-overlay">24時間営業! ネット予約! 始まる!</div>
+        <div class="hero-overlay"><span class="horizontal-text">24</span>時間営業！ネット予約！始まる！</div>
     </section>
 
     <!-- News Section -->
@@ -1450,10 +1456,33 @@
     </footer>
 
     <script>
+        // Hamburger menu toggle
+        function toggleMenu() {
+            const navbar = document.getElementById('navbar');
+            const hamburger = document.querySelector('.hamburger');
+            navbar.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        }
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            const navbar = document.getElementById('navbar');
+            const hamburger = document.querySelector('.hamburger');
+            if (navbar && hamburger && !navbar.contains(e.target) && !hamburger.contains(e.target)) {
+                navbar.classList.remove('active');
+                hamburger.classList.remove('active');
+            }
+        });
+
         // Smooth scrolling for navigation links
         document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
+                // Close mobile menu
+                const navbar = document.getElementById('navbar');
+                const hamburger = document.querySelector('.hamburger');
+                if (navbar) navbar.classList.remove('active');
+                if (hamburger) hamburger.classList.remove('active');
                 // Remove active class from all nav links
                 document.querySelectorAll('nav a').forEach(link => {
                     link.classList.remove('active');
