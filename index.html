@@ -119,6 +119,9 @@
         .hero {
             position: relative;
             width: 100%;
+            max-width: none;
+            margin: 0;
+            padding: 0;
             height: 70vh;
             min-height: 600px;
             display: flex;
@@ -140,7 +143,7 @@
 
         .hero-overlay {
             position: absolute;
-            left: 225px;
+            left: 15%;
             top: 0%;
             height: 85%;
             background: rgba(0, 0, 0, 0.9);
@@ -321,9 +324,9 @@
             display: inline-block;
             padding: 12px 40px;
             background: #fff;
-            color: #0066cc;
+            color: #0080ff;
             text-decoration: none;
-            border: 1px solid #0066cc;
+            border: 1px solid #0080ff;
             border-radius: 0;
             transition: all 0.3s ease;
             font-size: 14px;
@@ -369,15 +372,15 @@
         }
 
         .studio-banner-text {
-            font-size: 50px;
+            font-size: 60px;
             font-weight: 900;
             font-style: normal;
-            color: rgba(255, 255, 255, 0.55);
+            color: rgba(255, 255, 255, 0.78);
             white-space: nowrap;
             letter-spacing: 14px;
             user-select: none;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-            -webkit-text-stroke: 2px rgba(180, 180, 180, 0.55);
+            text-shadow: 0 2px 0 rgba(255, 255, 255, 0.14);
+            -webkit-text-stroke: 2px rgba(255, 255, 255, 0.55);
         }
 
         .studio-content {
@@ -537,7 +540,7 @@
             display: flex;
             justify-content: center;
             gap: 60px;
-            width: 63%;
+            width: 100%;
             max-width: 100%;
             margin: 0 auto;
         }
@@ -549,7 +552,9 @@
             background-position: center;
             padding: 35px 45px;
             width: 420px;
+            max-width: 450px;
             min-height: 220px;
+            flex: 1;
         }
 
         .price .section-title {
@@ -585,18 +590,30 @@
             font-size: 14px;
             margin: 15px 0 25px;
             line-height: 1.8;
-            display: flex;
-            flex-direction: column;
-            gap: 5px;
+            display: grid;
+            grid-template-columns: auto auto;
+            gap: 8px 20px;
+            justify-content: start;
+        }
+
+        .price-details .price-label {
+            text-align: left;
+        }
+
+        .price-details .price-value {
+            text-align: left;
         }
 
         .price .btn-view-more {
             background: transparent;
             color: #fff;
             border: 1px solid #fff;
-            padding: 6px 20px;
-            font-size: 11px;
-            align-self: flex-start;
+            padding: 8px 40px;
+            font-size: 12px;
+            display: block;
+            text-align: center;
+            width: fit-content;
+            margin: 0 auto;
         }
 
         .price .btn-view-more:hover {
@@ -611,7 +628,9 @@
             background-position: center;
             padding: 35px 45px;
             width: 420px;
+            max-width: 450px;
             min-height: 220px;
+            flex: 1;
         }
 
         .access .section-title {
@@ -653,9 +672,12 @@
             background: transparent;
             color: #fff;
             border: 1px solid #fff;
-            padding: 6px 20px;
-            font-size: 11px;
-            display: inline-block;
+            padding: 8px 40px;
+            font-size: 12px;
+            display: block;
+            text-align: center;
+            width: fit-content;
+            margin: 0 auto;
         }
 
         .access .btn-view-more:hover {
@@ -670,7 +692,7 @@
             background-image: url('ごあいさつ背景.png');
             background-size: cover;
             background-position: center;
-            padding: 0 200px;
+            padding: 0;
         }
 
         .promotional-header {
@@ -705,22 +727,26 @@
             padding: 40px 0 80px;
             display: flex;
             justify-content: center;
+            background: rgba(0, 0, 0, 0.75);
+            width: 100%;
         }
 
         .promotional-content {
             position: relative;
             z-index: 10;
-            max-width: 700px;
+            max-width: 800px;
+            width: 100%;
             text-align: left;
             color: #fff;
-            background: rgba(0, 0, 0, 0.6);
-            padding: 40px 50px;
+            background: transparent;
+            padding: 50px 60px;
+            margin: 0 auto;
         }
 
         .promotional-title {
-            font-size: 22px;
+            font-size: 28px;
             color: #fff;
-            margin-bottom: 25px;
+            margin-bottom: 30px;
             font-weight: normal;
         }
 
@@ -730,25 +756,25 @@
         }
 
         .promotional-text {
-            font-size: 13px;
-            line-height: 1.9;
+            font-size: 15px;
+            line-height: 2;
             margin-bottom: 10px;
         }
 
         .promotional-stars {
-            font-size: 13px;
-            margin: 20px 0;
+            font-size: 15px;
+            margin: 25px 0;
         }
 
         .promotional-cta {
-            font-size: 13px;
-            margin-top: 15px;
-            line-height: 1.8;
+            font-size: 15px;
+            margin-top: 20px;
+            line-height: 2;
         }
 
         .promotional-footer {
-            font-size: 13px;
-            margin-top: 20px;
+            font-size: 15px;
+            margin-top: 25px;
             color: #fff;
         }
 
@@ -765,8 +791,11 @@
             background-size: cover;
             background-position: center;
             display: flex;
+            justify-content: center; /* centers both cards horizontally */
             align-items: stretch;
             min-height: 500px;
+            
+            gap: 0; /* gap between the two cards - adjust as needed */
         }
 
         .studio-info-content {
@@ -774,61 +803,87 @@
             z-index: 10;
             flex: 0 0 auto;
             background: rgba(235, 235, 235, 0.92);
-            padding: 40px 45px;
+            padding: 40px 50px 45px 50px; /* top right bottom left */
             color: #333;
-            width: min(500px, 62vw);
+            width: min(520px, 55vw); /* card width */
             max-width: 90%;
+            height:520px;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* centers all children horizontally */
+        }
+
+        .studio-info-content .info-inner {
+            text-align: left;
+            width: 100%;
+            max-width: 400px;
         }
 
         .studio-info .section-title {
             color: #333;
-            font-size: 24px;
-            margin-bottom: 3px;
+            font-size: 26px;
+            margin-bottom: 0;
             font-weight: normal;
-            border-bottom: 1px solid #333;
-            padding-bottom: 5px;
-            display: inline-block;
+            border-bottom: none;
+            padding-bottom: 0;
+            display: block;
+            text-align: center;
         }
 
         .studio-info .section-title .title-s {
-            font-size: 28px;
+            font-size: 32px;
+            color: #0066cc;
+            font-weight: bold;
         }
 
         .studio-info .section-title .title-i {
-            font-size: 28px;
+            font-size: 32px;
+            color: #0066cc;
+            font-weight: bold;
         }
 
         .studio-info .section-subtitle {
             color: #333;
-            font-size: 12px;
+            font-size: 13px;
             margin-bottom: 20px;
-            margin-top: 5px;
+            margin-top: 4px;
+            text-align: center;
         }
 
         .studio-info .studio-name {
-            font-size: 14px;
+            font-size: 16px;
             font-weight: bold;
             margin-bottom: 15px;
-            border-bottom: 1px solid #333;
-            padding-bottom: 3px;
+            border-bottom: none;
+            padding-bottom: 4px;
             display: inline-block;
         }
 
+        .studio-info .studio-name .name-s {
+            color: #0066cc;
+            font-size: 18px;
+        }
+
+        .studio-info .studio-name .name-l {
+            color: #0066cc;
+            font-size: 18px;
+        }
+
         .info-details {
-            font-size: 12px;
-            line-height: 1.7;
-            margin: 15px 0;
+            font-size: 14px;
+            line-height: 1.9;
+            margin: 12px 0;
             color: #000000;
         }
 
         .info-details p {
-            margin-bottom: 3px;
+            margin-bottom: 2px;
         }
 
         .info-banner {
             position: relative;
             z-index: 20;
-            width: 500px;
+            width: 500px; /* banner width - should match content card */
             flex-shrink: 0;
         }
 
@@ -923,7 +978,7 @@
             left: 50%;
             transform: translateX(-50%);
             width: 63%;
-            background: #4a4a4a;
+            background: rgba(74, 74, 74, 0.5); /* semi-transparent */
             padding: 15px 20px;
             z-index: 1000;
             display: flex;
@@ -941,12 +996,12 @@
         .sticky-btn {
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 15px;
             background: #fff;
-            border: 1px solid #ccc;
-            padding: 10px 30px;
+            border: 1px solid #333;
+            padding: 15px 50px;
             text-decoration: none;
-            color: #7fb3d5;
+            color: #333;
             font-size: 16px;
             font-weight: 500;
             transition: all 0.3s;
@@ -969,28 +1024,98 @@
         }
 
         .sticky-btn-title {
-            font-size: 18px;
-            color: #3d60d1;
+            font-size: 20px;
+            color: #0066cc;
             font-weight: 500;
         }
 
         .sticky-btn-subtitle {
-            font-size: 11px;
-            color: #131212;
+            font-size: 12px;
+            color: #333;
         }
 
         /* Footer CTA container */
         .footer-cta-container {
-            background: #4a4a4a;
-            padding: 20px;
+            background: rgba(74, 74, 74, 0.5); /* more semi-transparent dark background */
+            padding: 25px 20px;
             display: flex;
             justify-content: center;
-            gap: 30px;
+            gap: 40px;
         }
 
         /* Add padding to body for sticky bar */
         body {
             padding-bottom: 80px;
+        }
+
+        /* Desktop full-width layout (do not affect mobile/tablet) */
+        @media (min-width: 1024px) {
+            section {
+                max-width: none;
+                width: 100%;
+                margin: 0;
+            }
+
+            nav {
+                max-width: none;
+            }
+
+            .studio {
+                width: 100%;
+                max-width: none;
+            }
+
+            .price-access-container {
+                width: 100%;
+                max-width: none;
+                margin: 0;
+            }
+
+            footer {
+                width: 100%;
+                max-width: none;
+                margin: 0;
+            }
+
+            .footer-map,
+            .footer-buttons {
+                max-width: none;
+            }
+
+            .sticky-bottom-bar {
+                width: 100%;
+                left: 0;
+                transform: none;
+            }
+
+            /* Studio: full-bleed background + watermark, keep content padded */
+            .studio {
+                padding-top: 0;
+                padding-left: 0;
+                padding-right: 0;
+            }
+
+            .studio-header {
+                padding-top: 80px;
+            }
+
+            .studio-banner {
+                padding-left: 0;
+                --watermark-y: 70px;
+            }
+
+            .studio-header .studio-content,
+            .studio > .studio-content {
+                padding-left: 40px;
+                padding-right: 40px;
+            }
+
+            .studio-description {
+                text-align: left;
+                max-width: 900px;
+                margin-left: auto;
+                margin-right: auto;
+            }
         }
 
         /* Responsive - iPad Air (820px) */
@@ -1696,7 +1821,7 @@
     <section class="studio" id="studio">
         <div class="studio-header">
             <div class="studio-banner">
-                <div class="studio-banner-text">Studio LiVS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Studio LiVS</div>
+                <div class="studio-banner-text">&nbsp;Studio LiVS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Studio LiVS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Studio LiVS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Studio LiVS</div>
             </div>
             <div class="studio-content">
                 <h2 class="section-title studio-title"><span class="studio-s">S</span><span class="studio-tudio">TUDIO</span></h2>
@@ -1774,8 +1899,8 @@
             </h2>
             <h3 class="section-subtitle">料金</h3>
             <div class="price-details">
-                <div>A スタジオ / B スタジオ&emsp;&emsp;¥800〜¥1,400/1H</div>
-                <div>C スタジオ&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;¥500〜/1H</div>
+                <span class="price-label">A スタジオ / B スタジオ</span><span class="price-value">¥800〜¥1,400/1H</span>
+                <span class="price-label">C スタジオ</span><span class="price-value">¥500〜/1H</span>
             </div>
             <a href="#" class="btn-view-more">View more</a>
         </section>
@@ -1841,19 +1966,21 @@
         <div class="studio-info-content">
             <h2 class="section-title"><span class="title-s">S</span>TUDIO <span class="title-i">I</span>NFORMATION</h2>
             <h3 class="section-subtitle">スタジオ案内</h3>
-            <p class="studio-name">STUDIO LiVS［スタジオ・リヴス］</p>
-            <div class="info-details">
-                <p>〒900-0004</p>
-                <p>沖縄県那覇市銘苅 1-14-16</p>
-                <p>大盛産業ビル B1F</p>
-                <p>モノレール古島駅から徒歩約 2 分のところにあります。</p>
-                <p>大盛産業ビルの裏手 1 階になります。</p>
-                <p></p>
-                <p>営業時間 24 時間/365 日 営業中</p>
-                <p>休業日 なし</p>
-                <p>電 話 080-3964-9023（12：00〜24：00）</p>
-                <p>駐車場 店舗前面に数台有り（最大 6 台可）</p>
-                <p>※studio の予約状況により駐車場の状況は異なります。</p>
+            <div class="info-inner">
+                <p class="studio-name"><span class="name-s">S</span>TUDIO <span class="name-l">L</span>iVS［スタジオ・リヴス］</p>
+                <div class="info-details">
+                    <p>〒900-0004</p>
+                    <p>沖縄県那覇市銘苅 1-14-16</p>
+                    <p>大盛産業ビル B1F</p>
+                    <p>モノレール古島駅から徒歩約 2 分のところにあります。</p>
+                    <p>大盛産業ビルの裏手 1 階になります。</p>
+                    <p></p>
+                    <p>営業時間 24 時間/365 日 営業中</p>
+                    <p>休業日 なし</p>
+                    <p>電 話 080-3964-9023（12：00〜24：00）</p>
+                    <p>駐車場 店舗前面に数台有り（最大 6 台可）</p>
+                    <p>※studio の予約状況により駐車場の状況は異なります。</p>
+                </div>
             </div>
         </div><div class="info-banner"><img src="広告画像.png" alt="24時間営業!! ネット予約! 始まる!!!"></div>
     </section>
