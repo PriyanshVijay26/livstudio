@@ -98,14 +98,14 @@
         }
 
         nav a .nav-english {
-            font-size: 20px;                      /* FONT-SIZE: English text size - increase for bigger text */
+            font-size: 25px;                      /* FONT-SIZE: English text size - increase for bigger text */
             font-weight: bold;
             margin-bottom: 4px;                   /* MARGIN-BOTTOM: space between English and Japanese */
             line-height: 1.2;
         }
 
         nav a .nav-japanese {
-            font-size: 13px;                      /* FONT-SIZE: Japanese text size - increase for bigger text */
+            font-size: 17px;                      /* FONT-SIZE: Japanese text size - increase for bigger text */
             color: #666;
             line-height: 1.2;
         }
@@ -122,19 +122,19 @@
             max-width: none;
             margin: 0;
             padding: 0;
-            height: 70vh;
-            min-height: 600px;
+            height: auto;
+            min-height: auto;
             display: flex;
             align-items: center;
-            overflow: hidden;
+            overflow: visible;
         }
 
         .hero-image {
             width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: center;
-            position: absolute;
+            height: auto;
+            object-fit: contain;
+            object-position: center top;
+            position: relative;
             top: 0;
             left: 0;
             z-index: 1;
@@ -418,7 +418,7 @@
         }
 
         .studio-description {
-            font-size: 14px;
+            font-size: 17px;
             line-height: 2;
             margin-bottom: 50px;
             color: #000000;
@@ -532,11 +532,11 @@
             background-image: url('PRICE・ACCESS背景.png');
             background-size: cover;
             background-position: center;
-            padding: 80px 100px 140px;       /* TOP: 80px | LEFT/RIGHT: 100px | BOTTOM: 140px - increase these for more height */
+            padding: 120px 100px 180px;       /* TOP: 120px | LEFT/RIGHT: 100px | BOTTOM: 180px - increase these for more height */
             display: flex;
             justify-content: center;
             align-items: stretch;
-            gap: 60px;                        /* GAP: space between the two cards */
+            gap: 80px;                        /* GAP: space between the two cards */
             width: 100%;
             max-width: 100%;
             margin: 0 auto;
@@ -547,10 +547,10 @@
             background-image: url('長方形 105.png');
             background-size: cover;
             background-position: center;
-            padding: 50px 55px;               /* PADDING: 50px top/bottom, 55px left/right - increase for bigger card */
-            width: 480px;                     /* WIDTH: card width - increase for wider card */
-            max-width: 520px;                 /* MAX-WIDTH: maximum card width */
-            min-height: 300px;                /* MIN-HEIGHT: minimum card height - increase for taller card */
+            padding: 60px 70px;               /* PADDING: 60px top/bottom, 70px left/right - increase for bigger card */
+            width: 550px;                     /* WIDTH: card width - increase for wider card */
+            max-width: 600px;                 /* MAX-WIDTH: maximum card width */
+            min-height: 380px;                /* MIN-HEIGHT: minimum card height - increase for taller card */
             flex: 1;
             display: flex;
             flex-direction: column;
@@ -561,15 +561,15 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 3px;
-            font-size: 28px;
+            gap: 5px;
+            font-size: 36px;
             margin-bottom: 0;
             font-weight: normal;
         }
 
         .price .section-title .title-icon {
-            width: 24px;
-            height: 24px;
+            width: 32px;
+            height: 32px;
             color: #fff;
         }
 
@@ -580,20 +580,20 @@
 
         .price .section-subtitle {
             color: #fff;
-            font-size: 12px;
-            margin-bottom: 25px;
-            margin-top: 2px;
+            font-size: 16px;
+            margin-bottom: 30px;
+            margin-top: 4px;
             text-align: center;
         }
 
         .price-details {
             color: #fff;
-            font-size: 14px;
-            margin: 15px 0 25px;
-            line-height: 1.8;
+            font-size: 18px;
+            margin: 20px 0 30px;
+            line-height: 1.9;
             display: grid;
             grid-template-columns: auto auto;
-            gap: 8px 20px;
+            gap: 10px 25px;
             justify-content: center;
         }
 
@@ -609,8 +609,8 @@
             background: transparent;
             color: #fff;
             border: 1px solid #fff;
-            padding: 8px 40px;
-            font-size: 12px;
+            padding: 12px 50px;
+            font-size: 15px;
             display: block;
             text-align: center;
             width: fit-content;
@@ -628,10 +628,10 @@
             background-image: url('長方形 105.png');
             background-size: cover;
             background-position: center;
-            padding: 50px 55px;               /* PADDING: 50px top/bottom, 55px left/right - increase for bigger card */
-            width: 480px;                     /* WIDTH: card width - increase for wider card */
-            max-width: 520px;                 /* MAX-WIDTH: maximum card width */
-            min-height: 300px;                /* MIN-HEIGHT: minimum card height - increase for taller card */
+            padding: 60px 70px;               /* PADDING: 60px top/bottom, 70px left/right - increase for bigger card */
+            width: 550px;                     /* WIDTH: card width - increase for wider card */
+            max-width: 600px;                 /* MAX-WIDTH: maximum card width */
+            min-height: 380px;                /* MIN-HEIGHT: minimum card height - increase for taller card */
             flex: 1;
             display: flex;
             flex-direction: column;
@@ -642,15 +642,15 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 3px;
-            font-size: 28px;
+            gap: 5px;
+            font-size: 36px;
             margin-bottom: 0;
             font-weight: normal;
         }
 
         .access .section-title .title-icon {
-            width: 24px;
-            height: 24px;
+            width: 32px;
+            height: 32px;
             color: #fff;
         }
 
@@ -661,17 +661,17 @@
 
         .access .section-subtitle {
             color: #fff;
-            font-size: 12px;
-            margin-bottom: 25px;
-            margin-top: 2px;
+            font-size: 16px;
+            margin-bottom: 30px;
+            margin-top: 4px;
             text-align: center;
         }
 
         .access-details {
             color: #fff;
-            font-size: 14px;
-            margin: 15px 0 25px;
-            min-height: 46px;
+            font-size: 18px;
+            margin: 20px 0 30px;
+            min-height: 56px;
             text-align: center;
         }
 
@@ -679,8 +679,8 @@
             background: transparent;
             color: #fff;
             border: 1px solid #fff;
-            padding: 8px 40px;
-            font-size: 12px;
+            padding: 12px 50px;
+            font-size: 15px;
             display: block;
             text-align: center;
             width: fit-content;
@@ -764,18 +764,21 @@
         }
 
         .promotional-text {
-            font-size: 16px;                      /* FONT-SIZE: text size - increase for bigger text */
+            font-size: 18px;                      /* FONT-SIZE: text size - increase for bigger text */
             line-height: 2;
             margin-bottom: 10px;
             font-weight: 500;                     /* FONT-WEIGHT: 400=normal, 500=medium, 600=semi-bold, 700=bold */
         }
 
+        .no-break {
+            white-space: nowrap;
+        }
         .promotional-text .blue-dot {
             color: #4da6ff;                       /* BLUE DOT COLOR */
         }
 
         .promotional-stars {
-            font-size: 16px;                      /* FONT-SIZE: same as promotional-text */
+            font-size: 18px;                      /* FONT-SIZE: same as promotional-text */
             margin: 25px 0;
             font-weight: 500;                     /* FONT-WEIGHT: same as promotional-text */
         }
@@ -785,14 +788,14 @@
         }
 
         .promotional-cta {
-            font-size: 16px;                      /* FONT-SIZE: text size */
+            font-size: 18px;                      /* FONT-SIZE: text size */
             margin-top: 20px;
             line-height: 2;
             font-weight: 500;                     /* FONT-WEIGHT: boldness */
         }
 
         .promotional-footer {
-            font-size: 15px;
+            font-size: 18px;
             margin-top: 25px;
             color: #fff;
         }
@@ -812,8 +815,8 @@
             display: flex;
             justify-content: center; /* centers both cards horizontally */
             align-items: stretch;
-            min-height: 500px;
-            
+            min-height: 700px;
+            padding: 60px 0;
             gap: 0; /* gap between the two cards - adjust as needed */
         }
 
@@ -822,11 +825,11 @@
             z-index: 10;
             flex: 0 0 auto;
             background: rgba(255, 255, 255, 0.65);  /* TRANSLUCENT: white with 85% opacity - lower = more see-through */
-            padding: 40px 50px 45px 50px; /* top right bottom left */
+            padding: 50px 60px 55px 60px; /* top right bottom left */
             color: #000;                            /* TEXT COLOR: pure black */
-            width: min(520px, 55vw); /* card width */
+            width: min(620px, 55vw); /* card width - increased */
             max-width: 90%;
-            height:520px;
+            height: 620px;                           /* HEIGHT: increased */
             display: flex;
             flex-direction: column;
             align-items: center; /* centers all children horizontally */
@@ -835,12 +838,12 @@
         .studio-info-content .info-inner {
             text-align: left;
             width: 100%;
-            max-width: 400px;
+            max-width: 480px;
         }
 
         .studio-info .section-title {
             color: #000000;                            /* TEXT COLOR: pure black */
-            font-size: 26px;
+            font-size: 32px;
             margin-bottom: 0;
             font-weight: 700;                         /* FONT-WEIGHT: 700 = bold, 400 = normal, 900 = extra bold */
             border-bottom: none;
@@ -850,14 +853,14 @@
         }
 
         .studio-info .section-title .title-s {
-            font-size: 32px;
+            font-size: 40px;
             color: #0066cc;
             font-weight: 900;
             vertical-align: baseline;             /* VERTICAL-ALIGN: baseline aligns with other text */
         }
 
         .studio-info .section-title .title-i {
-            font-size: 32px;
+            font-size: 40px;
             color: #0066cc;
             font-weight: 900;
             vertical-align: baseline;             /* VERTICAL-ALIGN: baseline aligns with other text */
@@ -865,47 +868,47 @@
 
         .studio-info .section-subtitle {
             color: #000000;                            /* TEXT COLOR: pure black */
-            font-size: 13px;
-            margin-bottom: 20px;
-            margin-top: 4px;
+            font-size: 16px;
+            margin-bottom: 25px;
+            margin-top: 6px;
             text-align: center;
         }
 
         .studio-info .studio-name {
-            font-size: 16px;
+            font-size: 20px;
             font-weight: bold;
-            margin-bottom: 15px;
+            margin-bottom: 0px;
             border-bottom: none;
-            padding-bottom: 4px;
+            padding-bottom: 2px;
             display: inline-block;
         }
 
         .studio-info .studio-name .name-s {
             color: #0066cc;
-            font-size: 18px;
+            font-size: 22px;
         }
 
         .studio-info .studio-name .name-l {
             color: #0066cc;
-            font-size: 18px;
+            font-size: 22px;
         }
 
         .info-details {
-            font-size: 15px;
-            line-height: 1.9;
+            font-size: 18px;
+            line-height: 2.0;
             margin: 12px 0;
             color: #000000;
             font-weight: 600;                         /* FONT-WEIGHT: 600 = semi-bold, 400 = normal, 700 = bold */
         }
 
         .info-details p {
-            margin-bottom: 2px;
+            margin-bottom: 3px;
         }
 
         .info-banner {
             position: relative;
             z-index: 20;
-            width: 500px; /* banner width - should match content card */
+            width: 600px; /* banner width - increased */
             flex-shrink: 0;
         }
 
@@ -1018,17 +1021,20 @@
 
         .sticky-btn {
             display: flex;
+            flex-direction: row;
             align-items: center;
+            justify-content: center;
             gap: 15px;
             background: #fff;
             border: 1px solid #333;
-            padding: 25px 70px;               /* PADDING: same as footer */
-            min-width: 350px;                 /* MIN-WIDTH: same as footer */
+            padding: 15px 40px;               /* PADDING: reduced for smaller height */
+            min-width: 650px;                 /* MIN-WIDTH: adjusted */
             text-decoration: none;
             color: #333;
             font-size: 16px;
             font-weight: 500;
             transition: all 0.3s;
+            text-align: center;
         }
 
         .sticky-btn:hover {
@@ -1072,7 +1078,7 @@
 
         /* Footer CTA container */
         .footer-cta-container {
-            background: #fff;
+            background: rgba(255, 255, 255, 0.95);
             padding: 40px 20px;
             display: flex;
             justify-content: center;
@@ -1082,14 +1088,30 @@
         .footer-cta-container .sticky-btn {
             background: #fff;
             border: 1px solid #333;
-            padding: 25px 70px;               /* PADDING: increased for bigger box */
-            min-width: 350px;                 /* MIN-WIDTH: minimum box width */
+            padding: 20px 50px;               /* PADDING: adjusted for row layout */
+            min-width: 650px;                 /* MIN-WIDTH: minimum box width */
             /* width: 320px;                     WIDTH: fixed width for both boxes to be equal */
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            gap: 15px;
         }
 
         .footer-cta-container .sticky-btn-icon {
             width: 40px;                          /* WIDTH: icon size in footer - INCREASED */
             height: 40px;                         /* HEIGHT: icon size in footer - INCREASED */
+            margin: 0;                            /* No margin */
+            flex-shrink: 0;
+        }
+
+        .footer-cta-container .sticky-btn-content {
+            width: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
         }
 
         .footer-cta-container .sticky-btn-icon img {
@@ -2032,7 +2054,9 @@
                     <span class="highlight">L</span>ife is <span class="highlight">V</span>ery <span class="highlight">S</span>hort!!!!!!
                 </h2>
                 <p class="promotional-text">
-                    <span class="blue-dot">・・</span>君が忘れていた何かを思い出させてくれる Studio「LiVS」那覇新都心で営業中！！<br>
+                    <span class="no-break">
+                        <span class="blue-dot">・・</span>君が忘れていた何かを思い出させてくれる Studio「LiVS」那覇新都心で営業中！！
+                    </span><br>
                     「やるなら今しかねぇ〜！」「夢を追いかけるなら今しかねぇぇ〜〜！！」と<br>
                     熱く燃える君のハートを Studio「LiVS」はしっかりサポート！！<br>
                     広々室内にリーズナブルな料金設定。<br>
