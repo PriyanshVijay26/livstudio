@@ -704,7 +704,7 @@
         }
 
         .promotional-header {
-            padding: 100px 0 50px;
+            padding: 100px 0 90px;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -717,7 +717,7 @@
             background: transparent;
             border: 2px solid #fff;
             color: #fff;
-            padding: 12px 40px;
+            padding: 24px 40px;               /* PADDING: 18px top/bottom, 40px left/right - increase first value for more height */
             font-weight: bold;
             font-size: 22px;
             letter-spacing: 5px;
@@ -764,20 +764,31 @@
         }
 
         .promotional-text {
-            font-size: 15px;
+            font-size: 16px;                      /* FONT-SIZE: text size - increase for bigger text */
             line-height: 2;
             margin-bottom: 10px;
+            font-weight: 500;                     /* FONT-WEIGHT: 400=normal, 500=medium, 600=semi-bold, 700=bold */
+        }
+
+        .promotional-text .blue-dot {
+            color: #4da6ff;                       /* BLUE DOT COLOR */
         }
 
         .promotional-stars {
-            font-size: 15px;
+            font-size: 16px;                      /* FONT-SIZE: same as promotional-text */
             margin: 25px 0;
+            font-weight: 500;                     /* FONT-WEIGHT: same as promotional-text */
+        }
+
+        .promotional-stars .blue-dot {
+            color: #4da6ff;                       /* BLUE DOT COLOR */
         }
 
         .promotional-cta {
-            font-size: 15px;
+            font-size: 16px;                      /* FONT-SIZE: text size */
             margin-top: 20px;
             line-height: 2;
+            font-weight: 500;                     /* FONT-WEIGHT: boldness */
         }
 
         .promotional-footer {
@@ -831,7 +842,7 @@
             color: #000000;                            /* TEXT COLOR: pure black */
             font-size: 26px;
             margin-bottom: 0;
-            font-weight: normal;
+            font-weight: 700;                         /* FONT-WEIGHT: 700 = bold, 400 = normal, 900 = extra bold */
             border-bottom: none;
             padding-bottom: 0;
             display: block;
@@ -841,13 +852,15 @@
         .studio-info .section-title .title-s {
             font-size: 32px;
             color: #0066cc;
-            font-weight: bold;
+            font-weight: 900;
+            vertical-align: baseline;             /* VERTICAL-ALIGN: baseline aligns with other text */
         }
 
         .studio-info .section-title .title-i {
             font-size: 32px;
             color: #0066cc;
-            font-weight: bold;
+            font-weight: 900;
+            vertical-align: baseline;             /* VERTICAL-ALIGN: baseline aligns with other text */
         }
 
         .studio-info .section-subtitle {
@@ -878,10 +891,11 @@
         }
 
         .info-details {
-            font-size: 14px;
+            font-size: 15px;
             line-height: 1.9;
             margin: 12px 0;
             color: #000000;
+            font-weight: 600;                         /* FONT-WEIGHT: 600 = semi-bold, 400 = normal, 700 = bold */
         }
 
         .info-details p {
@@ -2018,14 +2032,14 @@
                     <span class="highlight">L</span>ife is <span class="highlight">V</span>ery <span class="highlight">S</span>hort!!!!!!
                 </h2>
                 <p class="promotional-text">
-                    ・・君が忘れていた何かを思い出させてくれる Studio「LiVS」那覇新都心で営業中！！<br>
+                    <span class="blue-dot">・・</span>君が忘れていた何かを思い出させてくれる Studio「LiVS」那覇新都心で営業中！！<br>
                     「やるなら今しかねぇ〜！」「夢を追いかけるなら今しかねぇぇ〜〜！！」と<br>
                     熱く燃える君のハートを Studio「LiVS」はしっかりサポート！！<br>
                     広々室内にリーズナブルな料金設定。<br>
                     たっぷり音楽を追求出来る空間に、君の夢はもう叶ったも同然！
                 </p>
                 <p class="promotional-stars">
-                    ・・君の青春はここで決まりだ！☆☆☆
+                    <span class="blue-dot">・・</span>君の青春はここで決まりだ！☆☆☆
                 </p>
                 <p class="promotional-cta">
                     さぁ！今すぐ予約しよう！今すぐ君の友達に知らせてあげよう！！<br>
