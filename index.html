@@ -39,7 +39,7 @@
         .logo-img {
             max-width: 400px;
             width: 100%;
-            height: 200PX;
+            /* height: 200PX; */
             display: block;
             margin: 0 auto;
         }
@@ -77,11 +77,11 @@
         }
 
         nav {
-            max-width: 1200px;
+            max-width: 1400px;                    /* MAX-WIDTH: container width - increase for wider spread */
             margin: 0 auto;
             display: flex;
             justify-content: center;
-            gap: 50px;
+            gap: 80px;                            /* GAP: space between nav items - increase for wider spread */
             flex-wrap: wrap;
             padding: 0 20px;
             width: 100%;
@@ -93,19 +93,19 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 4px 8px;
+            padding: 8px 15px;                    /* PADDING: click area size - increase for bigger buttons */
             transition: color 0.3s;
         }
 
         nav a .nav-english {
-            font-size: 16px;
+            font-size: 20px;                      /* FONT-SIZE: English text size - increase for bigger text */
             font-weight: bold;
-            margin-bottom: 2px;
+            margin-bottom: 4px;                   /* MARGIN-BOTTOM: space between English and Japanese */
             line-height: 1.2;
         }
 
         nav a .nav-japanese {
-            font-size: 11px;
+            font-size: 13px;                      /* FONT-SIZE: Japanese text size - increase for bigger text */
             color: #666;
             line-height: 1.2;
         }
@@ -284,6 +284,8 @@
             width: fit-content;
             margin: 30px auto 0;
             clear: both;
+            padding: 18px 70px;               /* PADDING: 18px top/bottom, 70px left/right - increase for bigger button */
+            font-size: 16px;                  /* FONT-SIZE: text size - increase for larger text */
         }
 
         .news-section-actions {
@@ -335,14 +337,14 @@
         }
 
         .btn-view-more:hover {
-            background: #ADD8E6;
-            border-color: #ADD8E6;
-            color: #0066cc;
+            background: #87CEEB;              /* HOVER BG: Light blue - change to adjust hover color */
+            border-color: #87CEEB;            /* HOVER BORDER: Light blue */
+            color: #fff;                      /* HOVER TEXT: White text on light blue */
         }
 
         /* Studio Section */
         .studio {
-            background: #e8e8e8;
+            background: #f2f2f2;
             position: relative;
             overflow: hidden;
             padding: 80px 40px;
@@ -382,16 +384,6 @@
             user-select: none;
             text-shadow: 0 2px 0 rgba(255, 255, 255, 0.14);
             -webkit-text-stroke: 2px rgba(255, 255, 255, 0.55);
-            animation: marquee 20s linear infinite;
-        }
-
-        @keyframes marquee {
-            0% {
-                transform: translateX(0);
-            }
-            100% {
-                transform: translateX(-50%);
-            }
         }
 
         .studio-content {
@@ -544,16 +536,22 @@
             object-fit: cover;
         }
 
+        /* Studio section View more button - below gallery */
+        .studio .btn-view-more {
+            padding: 18px 70px;               /* PADDING: 18px top/bottom, 70px left/right - increase for bigger button */
+            font-size: 16px;                  /* FONT-SIZE: text size - increase for larger text */
+        }
+
         /* Price & Access Container */
         .price-access-container {
             background-image: url('PRICE・ACCESS背景.png');
             background-size: cover;
             background-position: center;
-            padding: 50px 100px 110px;
+            padding: 80px 100px 140px;       /* TOP: 80px | LEFT/RIGHT: 100px | BOTTOM: 140px - increase these for more height */
             display: flex;
             justify-content: center;
             align-items: stretch;
-            gap: 60px;
+            gap: 60px;                        /* GAP: space between the two cards */
             width: 100%;
             max-width: 100%;
             margin: 0 auto;
@@ -564,10 +562,10 @@
             background-image: url('長方形 105.png');
             background-size: cover;
             background-position: center;
-            padding: 35px 45px;
-            width: 420px;
-            max-width: 450px;
-            min-height: 220px;
+            padding: 50px 55px;               /* PADDING: 50px top/bottom, 55px left/right - increase for bigger card */
+            width: 480px;                     /* WIDTH: card width - increase for wider card */
+            max-width: 520px;                 /* MAX-WIDTH: maximum card width */
+            min-height: 300px;                /* MIN-HEIGHT: minimum card height - increase for taller card */
             flex: 1;
             display: flex;
             flex-direction: column;
@@ -635,8 +633,9 @@
         }
 
         .price .btn-view-more:hover {
-            background: #fff;
-            color: #333;
+            background: #87CEEB;              /* HOVER BG: Light blue */
+            border-color: #87CEEB;            /* HOVER BORDER: Light blue */
+            color: #fff;                      /* HOVER TEXT: White */
         }
 
         /* Access Section */
@@ -644,10 +643,10 @@
             background-image: url('長方形 105.png');
             background-size: cover;
             background-position: center;
-            padding: 35px 45px;
-            width: 420px;
-            max-width: 450px;
-            min-height: 220px;
+            padding: 50px 55px;               /* PADDING: 50px top/bottom, 55px left/right - increase for bigger card */
+            width: 480px;                     /* WIDTH: card width - increase for wider card */
+            max-width: 520px;                 /* MAX-WIDTH: maximum card width */
+            min-height: 300px;                /* MIN-HEIGHT: minimum card height - increase for taller card */
             flex: 1;
             display: flex;
             flex-direction: column;
@@ -704,8 +703,9 @@
         }
 
         .access .btn-view-more:hover {
-            background: #fff;
-            color: #333;
+            background: #87CEEB;              /* HOVER BG: Light blue */
+            border-color: #87CEEB;            /* HOVER BORDER: Light blue */
+            color: #fff;                      /* HOVER TEXT: White */
         }
 
         /* Promotional Section */
@@ -825,9 +825,9 @@
             position: relative;
             z-index: 10;
             flex: 0 0 auto;
-            background: rgba(235, 235, 235, 0.92);
+            background: rgba(255, 255, 255, 0.85);  /* TRANSLUCENT: white with 85% opacity - lower = more see-through */
             padding: 40px 50px 45px 50px; /* top right bottom left */
-            color: #333;
+            color: #000;                            /* TEXT COLOR: pure black */
             width: min(520px, 55vw); /* card width */
             max-width: 90%;
             height:520px;
@@ -843,7 +843,7 @@
         }
 
         .studio-info .section-title {
-            color: #333;
+            color: #000000;                            /* TEXT COLOR: pure black */
             font-size: 26px;
             margin-bottom: 0;
             font-weight: normal;
@@ -866,7 +866,7 @@
         }
 
         .studio-info .section-subtitle {
-            color: #333;
+            color: #000000;                            /* TEXT COLOR: pure black */
             font-size: 13px;
             margin-bottom: 20px;
             margin-top: 4px;
@@ -1891,7 +1891,7 @@
     <section class="studio" id="studio">
         <div class="studio-header">
             <div class="studio-banner">
-                <div class="studio-banner-text">&nbsp;Studio LiVS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Studio LiVS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Studio LiVS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Studio LiVS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Studio LiVS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Studio LiVS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Studio LiVS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Studio LiVS</div>
+                <div class="studio-banner-text">&nbsp;&nbsp;Studio LiVS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Studio LiVS</div>
             </div>
             <div class="studio-content">
                 <h2 class="section-title studio-title"><span class="studio-s">S</span><span class="studio-tudio">TUDIO</span></h2>
