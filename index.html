@@ -375,7 +375,7 @@
         }
 
         .studio-banner-text {
-            font-size: 80px;
+            font-size: 70px;
             font-weight: 900;
             font-style: normal;
             color: rgba(255, 255, 255, 0.78);
@@ -436,33 +436,18 @@
         .feature-item {
             text-align: center;
             transition: transform 0.3s ease;
-            opacity: 0;
+            opacity: 1;                           /* OPACITY: 1 = visible, was 0 for animation */
         }
 
         .feature-item:hover {
             transform: translateY(-5px);
         }
 
-        .feature-item:nth-child(1) { 
-            animation: slideInFromLeft 0.8s ease-out forwards;
-            animation-delay: 0.1s; 
-        }
-        .feature-item:nth-child(2) { 
-            animation: slideInFromLeft 0.8s ease-out forwards;
-            animation-delay: 0.2s; 
-        }
-        .feature-item:nth-child(3) { 
-            animation: slideInFromRight 0.8s ease-out forwards;
-            animation-delay: 0.1s; 
-        }
-        .feature-item:nth-child(4) { 
-            animation: slideInFromRight 0.8s ease-out forwards;
-            animation-delay: 0.2s; 
-        }
+        /* Removed slide-in animations - items now display statically */
 
         .feature-icon {
-            width: 80px;
-            height: 80px;
+            width: 100px;                         /* WIDTH: icon size - increase for bigger icons */
+            height: 100px;                        /* HEIGHT: icon size - increase for bigger icons */
             margin: 0 auto 15px;
             display: flex;
             align-items: center;
@@ -476,8 +461,8 @@
         }
 
         .feature-icon-24h {
-            width: 80px;
-            height: 80px;
+            width: 100px;                         /* WIDTH: icon size - increase for bigger icons */
+            height: 100px;                        /* HEIGHT: icon size - increase for bigger icons */
             margin: 0 auto 15px;
             display: flex;
             align-items: center;
@@ -825,7 +810,7 @@
             position: relative;
             z-index: 10;
             flex: 0 0 auto;
-            background: rgba(255, 255, 255, 0.85);  /* TRANSLUCENT: white with 85% opacity - lower = more see-through */
+            background: rgba(255, 255, 255, 0.65);  /* TRANSLUCENT: white with 85% opacity - lower = more see-through */
             padding: 40px 50px 45px 50px; /* top right bottom left */
             color: #000;                            /* TEXT COLOR: pure black */
             width: min(520px, 55vw); /* card width */
@@ -1023,7 +1008,8 @@
             gap: 15px;
             background: #fff;
             border: 1px solid #333;
-            padding: 15px 50px;
+            padding: 25px 70px;               /* PADDING: same as footer */
+            min-width: 350px;                 /* MIN-WIDTH: same as footer */
             text-decoration: none;
             color: #333;
             font-size: 16px;
@@ -1036,8 +1022,17 @@
         }
 
         .sticky-btn-icon {
-            font-size: 20px;
-            color: #999;
+            width: 40px;                          /* WIDTH: icon size - same as footer */
+            height: 40px;                         /* HEIGHT: icon size - same as footer */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .sticky-btn-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
         }
 
         .sticky-btn-content {
@@ -1048,14 +1043,17 @@
         }
 
         .sticky-btn-title {
-            font-size: 20px;
+            font-size: 24px;                      /* FONT-SIZE: same as footer */
             color: #0066cc;
             font-weight: 500;
+            padding-bottom: 8px;                  /* PADDING-BOTTOM: space before underline */
+            border-bottom: 2px solid #130000;     /* BORDER-BOTTOM: underline - same as footer */
+            margin-bottom: 8px;                   /* MARGIN-BOTTOM: space after underline */
         }
 
         .sticky-btn-subtitle {
-            font-size: 12px;
-            color: #333;
+            font-size: 13px;                      /* FONT-SIZE: same as footer */
+            color: #110101;
         }
 
         /* Footer CTA container */
@@ -1070,25 +1068,35 @@
         .footer-cta-container .sticky-btn {
             background: #fff;
             border: 1px solid #333;
-            padding: 20px 60px;
-            min-width: 280px;
+            padding: 25px 70px;               /* PADDING: increased for bigger box */
+            min-width: 350px;                 /* MIN-WIDTH: minimum box width */
+            /* width: 320px;                     WIDTH: fixed width for both boxes to be equal */
         }
 
         .footer-cta-container .sticky-btn-icon {
-            font-size: 24px;
-            color: #333;
+            width: 40px;                          /* WIDTH: icon size in footer - INCREASED */
+            height: 40px;                         /* HEIGHT: icon size in footer - INCREASED */
+        }
+
+        .footer-cta-container .sticky-btn-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
         }
 
         .footer-cta-container .sticky-btn-title {
-            font-size: 22px;
+            font-size: 24px;                      /* FONT-SIZE: larger title */
             color: #0066cc;
             font-weight: 500;
+            padding-bottom: 8px;                  /* PADDING-BOTTOM: space before underline */
+            border-bottom: 2px solid #130000;        /* BORDER-BOTTOM: underline between title and subtitle */
+            margin-bottom: 8px;                   /* MARGIN-BOTTOM: space after underline */
         }
 
         .footer-cta-container .sticky-btn-subtitle {
             font-size: 13px;
-            color: #666;
-            margin-top: 4px;
+            color: #110101;
+            margin-top: 0;
         }
 
         /* Add padding to body for sticky bar */
@@ -1891,7 +1899,7 @@
     <section class="studio" id="studio">
         <div class="studio-header">
             <div class="studio-banner">
-                <div class="studio-banner-text">&nbsp;&nbsp;Studio LiVS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Studio LiVS</div>
+                <div class="studio-banner-text">&nbsp;Studio LiVS&nbsp;&nbsp;&nbsp;Studio LiVS&nbsp;&nbsp;&nbsp;Studio LiVS </div>
             </div>
             <div class="studio-content">
                 <h2 class="section-title studio-title"><span class="studio-s">S</span><span class="studio-tudio">TUDIO</span></h2>
@@ -1935,22 +1943,22 @@
             </div>
         <div class="studio-gallery">
             <div class="gallery-item">
-                <img src="スタジオ案内背景.png" alt="画像1">
+                <img src="gall_1.png" alt="画像1">
             </div>
             <div class="gallery-item">
-                <img src="スタジオ案内背景.png" alt="画像2">
+                <img src="gall_2.png" alt="画像2">
             </div>
             <div class="gallery-item">
-                <img src="スタジオ案内背景.png" alt="画像3">
+                <img src="gall_3.png" alt="画像3">
             </div>
             <div class="gallery-item">
-                <img src="スタジオ案内背景.png" alt="画像4">
+                <img src="gall_4.png" alt="画像4">
             </div>
             <div class="gallery-item">
-                <img src="スタジオ案内背景.png" alt="画像5">
+                <img src="gall_5.png" alt="画像5">
             </div>
             <div class="gallery-item">
-                <img src="スタジオ案内背景.png" alt="画像6">
+                <img src="gall_6.png" alt="画像6">
             </div>
         </div>
         <a href="#" class="btn-view-more">View more</a>
@@ -2068,14 +2076,14 @@
         </div>
         <div class="footer-cta-container">
             <a href="tel:080-3964-9023" class="sticky-btn">
-                <span class="sticky-btn-icon">📱</span>
+                <span class="sticky-btn-icon"><img src="tel_icon.png" alt="Phone"></span>
                 <div class="sticky-btn-content">
                     <span class="sticky-btn-title">080-3964-9023</span>
                     <span class="sticky-btn-subtitle">受付時間 12時-24時</span>
                 </div>
             </a>
             <a href="#" class="sticky-btn">
-                <span class="sticky-btn-icon">📅</span>
+                <span class="sticky-btn-icon"><img src="cal_time.png" alt="Calendar"></span>
                 <div class="sticky-btn-content">
                     <span class="sticky-btn-title">WEB予約</span>
                     <span class="sticky-btn-subtitle">24時間受付</span>
@@ -2087,14 +2095,14 @@
     <!-- Sticky Bottom Bar -->
     <div class="sticky-bottom-bar" id="stickyBar">
         <a href="tel:080-3964-9023" class="sticky-btn">
-            <span class="sticky-btn-icon">📱</span>
+            <span class="sticky-btn-icon"><img src="tel_icon.png" alt="Phone"></span>
             <div class="sticky-btn-content">
                 <span class="sticky-btn-title">080-3964-9023</span>
                 <span class="sticky-btn-subtitle">受付時間 12時-24時</span>
             </div>
         </a>
         <a href="#" class="sticky-btn">
-            <span class="sticky-btn-icon">📅</span>
+            <span class="sticky-btn-icon"><img src="cal_time.png" alt="Calendar"></span>
             <div class="sticky-btn-content">
                 <span class="sticky-btn-title">WEB予約</span>
                 <span class="sticky-btn-subtitle">24時間受付</span>
