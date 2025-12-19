@@ -234,6 +234,52 @@
             }
         }
 
+        @keyframes slideInFromRight {
+            from {
+                opacity: 0;
+                transform: translateX(100px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        /* Soft Scroll Animation Classes */
+        .fade-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .slide-in-left {
+            opacity: 0;
+            transform: translateX(-100px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .slide-in-left.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .slide-in-right {
+            opacity: 0;
+            transform: translateX(100px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .slide-in-right.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
         /* Section Styles */
         section {
             padding: 80px 20px;
@@ -247,7 +293,7 @@
             color: #0066cc;
             margin-bottom: 10px;
             font-weight: bold;
-            animation: fadeInUp 0.6s ease-out;
+            /* animation: fadeInUp 0.6s ease-out; removed simple animation in favor of scroll observer */
             transition: transform 0.3s ease;
         }
 
@@ -259,7 +305,7 @@
             font-size: 18px;
             color: #333;
             margin-bottom: 40px;
-            animation: fadeInUp 0.6s ease-out 0.2s both;
+            /* animation: fadeInUp 0.6s ease-out 0.2s both; removed simple animation */
         }
 
         /* News Section */
@@ -562,6 +608,7 @@
         /* Price & Access Container */
         .price-access-container {
             background-image: url('PRICE・ACCESS背景.png');
+            background-attachment: fixed;
             background-size: cover;
             background-position: center;
             padding: 120px 100px 180px;
@@ -578,9 +625,11 @@
 
         /* Price Section */
         .price {
-            background-image: url('長方形 105.png');
-            background-size: cover;
-            background-position: center;
+            /* background-image: url('長方形 105.png'); */
+            /* background-size: cover; */
+            /* background-position: center; */
+            position: relative;
+            z-index: 1;
             padding: 60px 70px;
             /* PADDING: 60px top/bottom, 70px left/right - increase for bigger card */
             width: 550px;
@@ -666,11 +715,27 @@
             /* HOVER TEXT: White */
         }
 
-        /* Access Section */
-        .access {
+        .price::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             background-image: url('長方形 105.png');
             background-size: cover;
             background-position: center;
+            opacity: 0.85;
+            z-index: -1;
+        }
+
+        /* Access Section */
+        .access {
+            /* background-image: url('長方形 105.png'); */
+            /* background-size: cover; */
+            /* background-position: center; */
+            position: relative;
+            z-index: 1;
             padding: 60px 70px;
             /* PADDING: 60px top/bottom, 70px left/right - increase for bigger card */
             width: 550px;
@@ -743,6 +808,20 @@
             /* HOVER BORDER: Light blue */
             color: #fff;
             /* HOVER TEXT: White */
+        }
+
+        .access::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('長方形 105.png');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.85;
+            z-index: -1;
         }
 
         /* Promotional Section */
@@ -871,6 +950,7 @@
         .studio-info {
             position: relative;
             background-image: url('スタジオ案内背景.png');
+            background-attachment: fixed;
             background-size: cover;
             background-position: center;
             display: flex;
@@ -2089,14 +2169,14 @@
 
     <!-- News Section -->
     <section class="news" id="news">
-        <h2 class="section-title"><span class="big-letter">N</span>EWS</h2>
-        <h3 class="section-subtitle">お知らせ</h3>
+        <h2 class="section-title fade-up"><span class="big-letter">N</span>EWS</h2>
+        <h3 class="section-subtitle fade-up">お知らせ</h3>
         <div class="news-items">
-            <div class="news-item">
+            <div class="news-item fade-up">
                 <span class="news-date">2025 年 0 月 0 日</span>
                 <span>テキスト テキスト テキスト テキスト</span>
             </div>
-            <div class="news-item">
+            <div class="news-item fade-up">
                 <span class="news-date">2025 年 0 月 0 日</span>
                 <span>テキスト テキスト テキスト テキスト</span>
             </div>
@@ -2108,17 +2188,18 @@
     <section class="studio" id="studio">
         <div class="studio-header">
             <div class="studio-banner">
-                <div class="studio-banner-text">&nbsp;Studio LiVS&nbsp;&nbsp;&nbsp;Studio LiVS&nbsp;&nbsp;&nbsp;Studio
+                <div class="studio-banner-text">&nbsp;Studio LiVS&nbsp;&nbsp;&nbsp;Studio
+                    LiVS&nbsp;&nbsp;&nbsp;Studio
                     LiVS </div>
             </div>
             <div class="studio-content">
-                <h2 class="section-title studio-title"><span class="studio-s">S</span><span
+                <h2 class="section-title studio-title fade-up"><span class="studio-s">S</span><span
                         class="studio-tudio">TUDIO</span></h2>
-                <h3 class="section-subtitle">スタジオ案内</h3>
+                <h3 class="section-subtitle fade-up">スタジオ案内</h3>
             </div>
         </div>
         <div class="studio-content">
-            <p class="studio-description">
+            <p class="studio-description fade-up">
                 スタディオ・リヴス－那覇新都心で 24 時間 365 日営業中－<br>
                 モノレール古島駅から徒歩 2 分、古島交差点すぐそば。<br>
                 駐車場完備でアクセス抜群!<br>
@@ -2127,25 +2208,25 @@
                 今すぐご予約を！お気軽にお越しください！
             </p>
             <div class="studio-features">
-                <div class="feature-item">
+                <div class="feature-item slide-in-left">
                     <div class="feature-icon">
                         <img src="駅近2分.png" alt="駅近古島駅 徒歩2分">
                     </div>
                     <div class="feature-text">駅近古島駅 徒歩2分</div>
                 </div>
-                <div class="feature-item">
+                <div class="feature-item slide-in-left">
                     <div class="feature-icon-24h">
                         <img src="24h_open.png" alt="24時間 OPEN">
                     </div>
                     <div class="feature-text">24時間 OPEN</div>
                 </div>
-                <div class="feature-item">
+                <div class="feature-item slide-in-right">
                     <div class="feature-icon">
                         <img src="27333.png" alt="深夜割・早朝割有り">
                     </div>
                     <div class="feature-text">深夜割・早朝割有り</div>
                 </div>
-                <div class="feature-item">
+                <div class="feature-item slide-in-right">
                     <div class="feature-icon">
                         <img src="駐車場完備.png" alt="駐車場完備">
                     </div>
@@ -2153,22 +2234,22 @@
                 </div>
             </div>
             <div class="studio-gallery">
-                <div class="gallery-item">
+                <div class="gallery-item fade-up">
                     <img src="gall_1.png" alt="画像1">
                 </div>
-                <div class="gallery-item">
+                <div class="gallery-item fade-up">
                     <img src="gall_2.png" alt="画像2">
                 </div>
-                <div class="gallery-item">
+                <div class="gallery-item fade-up">
                     <img src="gall_3.png" alt="画像3">
                 </div>
-                <div class="gallery-item">
+                <div class="gallery-item fade-up">
                     <img src="gall_4.png" alt="画像4">
                 </div>
-                <div class="gallery-item">
+                <div class="gallery-item fade-up">
                     <img src="gall_5.png" alt="画像5">
                 </div>
-                <div class="gallery-item">
+                <div class="gallery-item fade-up">
                     <img src="gall_6.png" alt="画像6">
                 </div>
             </div>
@@ -2178,7 +2259,7 @@
     <!-- Price & Access Section -->
     <div class="price-access-container">
         <!-- Price Section -->
-        <section class="price" id="price">
+        <section class="price fade-up" id="price">
             <h2 class="section-title">
                 <img src="PRICE.png" class="title-icon" alt="Price Icon">
                 <span class="title-first">P</span>RICE
@@ -2192,7 +2273,7 @@
         </section>
 
         <!-- Access Section -->
-        <section class="access" id="access">
+        <section class="access fade-up" id="access">
             <h2 class="section-title">
                 <img src="ACCESS.png" class="title-icon" alt="Access Icon">
                 <span class="title-first">A</span>CCESS
@@ -2208,12 +2289,12 @@
     <!-- Promotional Section -->
     <section class="promotional">
         <div class="promotional-header">
-            <div class="on-air-badge">
+            <div class="on-air-badge fade-up">
                 <img src="one_liv.png" alt="ON AIR" class="on-air-img">
             </div>
         </div>
         <div class="promotional-body">
-            <div class="promotional-content">
+            <div class="promotional-content fade-up">
                 <h2 class="promotional-title">
                     <span class="highlight">L</span>ife is <span class="highlight">V</span>ery <span
                         class="highlight">S</span>hort!!!!!!
@@ -2244,11 +2325,13 @@
 
     <!-- Studio Information Section -->
     <section class="studio-info">
-        <div class="studio-info-content">
-            <h2 class="section-title"><span class="title-s">S</span>TUDIO <span class="title-i">I</span>NFORMATION</h2>
+        <div class="studio-info-content fade-up">
+            <h2 class="section-title"><span class="title-s">S</span>TUDIO <span class="title-i">I</span>NFORMATION
+            </h2>
             <h3 class="section-subtitle">スタジオ案内</h3>
             <div class="info-inner">
-                <p class="studio-name"><span class="name-s">S</span>TUDIO <span class="name-l">L</span>iVS［スタジオ・リヴス］</p>
+                <p class="studio-name"><span class="name-s">S</span>TUDIO <span class="name-l">L</span>iVS［スタジオ・リヴス］
+                </p>
                 <div class="info-details">
                     <p>〒900-0004</p>
                     <p>沖縄県那覇市銘苅 1-14-16</p>
@@ -2264,7 +2347,7 @@
                 </div>
             </div>
         </div>
-        <div class="info-banner"><img src="広告画像.png" alt="24時間営業!! ネット予約! 始まる!!!"></div>
+        <div class="info-banner fade-up"><img src="広告画像.png" alt="24時間営業!! ネット予約! 始まる!!!"></div>
     </section>
 
     <!-- Footer -->
@@ -2313,6 +2396,27 @@
     </div>
 
     <script>
+        // Soft Scroll Animation Observer
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target); // Run only once
+                    }
+                });
+            }, observerOptions);
+
+            const fadeElements = document.querySelectorAll('.fade-up, .slide-in-left, .slide-in-right');
+            fadeElements.forEach(el => observer.observe(el));
+        });
+
         // Sticky bar hide on footer visible
         function handleStickyBar() {
             const stickyBar = document.getElementById('stickyBar');
@@ -2432,7 +2536,6 @@
                 this.style.paddingLeft = '0';
             });
         });
-
     </script>
 </body>
 
