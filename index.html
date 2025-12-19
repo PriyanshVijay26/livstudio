@@ -298,10 +298,7 @@
             width: fit-content;
             margin: 30px auto 0;
             clear: both;
-            padding: 18px 70px;
-            /* PADDING: 18px top/bottom, 70px left/right - increase for bigger button */
-            font-size: 16px;
-            /* FONT-SIZE: text size - increase for larger text */
+            padding: 18px 60px;
         }
 
         .news-section-actions {
@@ -350,23 +347,23 @@
             display: inline-block;
             padding: 12px 40px;
             background: #fff;
-            color: #0080ff;
+            color: #0066cc;
             text-decoration: none;
-            border: 1px solid #0080ff;
+            border: 2px solid #0066cc;
             border-radius: 0;
             transition: all 0.3s ease;
-            font-size: 14px;
-            font-weight: 400;
+            font-size: 20px;
+            font-weight: bold;
             margin-top: 30px;
         }
 
         .btn-view-more:hover {
             background: #87CEEB;
-            /* HOVER BG: Light blue - change to adjust hover color */
+            /* HOVER BG: Light blue */
             border-color: #87CEEB;
             /* HOVER BORDER: Light blue */
             color: #fff;
-            /* HOVER TEXT: White text on light blue */
+            /* HOVER TEXT: White */
         }
 
         /* Studio Section */
@@ -423,7 +420,7 @@
 
         .studio-title {
             display: flex;
-            align-items: center;
+            align-items: baseline;
             justify-content: center;
             gap: 0;
             background: transparent;
@@ -433,6 +430,7 @@
             color: #0066cc;
             font-weight: bold;
             background: transparent;
+            font-size: 60px;
         }
 
         .studio-tudio {
@@ -558,10 +556,7 @@
 
         /* Studio section View more button - below gallery */
         .studio .btn-view-more {
-            padding: 18px 70px;
-            /* PADDING: 18px top/bottom, 70px left/right - increase for bigger button */
-            font-size: 16px;
-            /* FONT-SIZE: text size - increase for larger text */
+            padding: 18px 60px;
         }
 
         /* Price & Access Container */
@@ -1541,6 +1536,10 @@
                 font-size: 17px;
             }
 
+            .studio-s {
+                font-size: 48px;
+            }
+
             section {
                 max-width: none;
                 width: 100%;
@@ -1610,15 +1609,15 @@
 
             .hero-overlay {
                 position: absolute;
-                font-size: 18px;
-                padding: 40px 20px;
-                min-width: 75px;
-                letter-spacing: 5px;
-                left: 20px;
-                top: 50%;
-                transform: translateY(-50%);
-                height: 75%;
-                max-height: 550px;
+                font-size: 15px;
+                padding: 30px 15px;
+                min-width: 60px;
+                letter-spacing: 4px;
+                left: 10px;
+                top: 0;
+                transform: none;
+                height: 100%;
+                writing-mode: vertical-lr;
             }
 
             .studio-banner-text {
@@ -1804,15 +1803,7 @@
 
 
 
-            .hero-overlay {
-                font-size: 16px;
-                padding: 35px 18px;
-                min-width: 70px;
-                left: 15px;
-                height: 72%;
-                max-height: 520px;
-                transform: translateY(-50%);
-            }
+            /* Removed hero-overlay override to inherit from 430px breakpoint */
         }
 
         /* Responsive - iPhone SE (375px) */
@@ -1890,14 +1881,15 @@
             .hero-overlay {
                 position: absolute;
                 font-size: 14px;
-                padding: 35px 16px;
-                min-width: 65px;
+                padding: 30px 12px;
+                min-width: 60px;
                 letter-spacing: 3px;
-                left: 12px;
-                top: 50%;
-                transform: translateY(-50%);
-                height: 70%;
-                max-height: 480px;
+                left: 10px;
+                top: 0;
+                transform: none;
+                height: 100%;
+                max-height: none;
+                writing-mode: vertical-lr;
             }
 
             .price-details {
