@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Studio LiVS - Life is Very Short!</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <style>
         * {
             margin: 0;
@@ -246,39 +247,7 @@
             }
         }
 
-        /* Soft Scroll Animation Classes */
-        .fade-up {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 1.5s ease-out, transform 1.5s ease-out;
-        }
-
-        .fade-up.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .slide-in-left {
-            opacity: 0;
-            transform: translateX(-100px);
-            transition: opacity 1.5s ease-out, transform 1.5s ease-out;
-        }
-
-        .slide-in-left.visible {
-            opacity: 1;
-            transform: translateX(0);
-        }
-
-        .slide-in-right {
-            opacity: 0;
-            transform: translateX(100px);
-            transition: opacity 1.5s ease-out, transform 1.5s ease-out;
-        }
-
-        .slide-in-right.visible {
-            opacity: 1;
-            transform: translateX(0);
-        }
+        /* Soft Scroll Animation Classes Removed - Replaced by AOS */
 
         /* Section Styles */
         section {
@@ -2163,20 +2132,21 @@
 
     <!-- Hero Section -->
     <section class="hero" id="home">
-        <img src="FV写真.png" alt="Studio LiVS Drums" class="hero-image">
-        <div class="hero-overlay"><span class="horizontal-text">24</span>時間営業！ネット予約！始まる！</div>
+        <img src="FV写真.png" alt="Studio LiVS Drums" class="hero-image" data-aos="fade-up" data-aos-duration="1500">
+        <div class="hero-overlay" data-aos="fade-right" data-aos-delay="800"><span
+                class="horizontal-text">24</span>時間営業！ネット予約！始まる！</div>
     </section>
 
     <!-- News Section -->
     <section class="news" id="news">
-        <h2 class="section-title fade-up"><span class="big-letter">N</span>EWS</h2>
-        <h3 class="section-subtitle fade-up">お知らせ</h3>
+        <h2 class="section-title" data-aos="fade-up"><span class="big-letter">N</span>EWS</h2>
+        <h3 class="section-subtitle" data-aos="fade-up" data-aos-delay="100">お知らせ</h3>
         <div class="news-items">
-            <div class="news-item fade-up">
+            <div class="news-item" data-aos="fade-left" data-aos-delay="200">
                 <span class="news-date">2025 年 0 月 0 日</span>
                 <span>テキスト テキスト テキスト テキスト</span>
             </div>
-            <div class="news-item fade-up">
+            <div class="news-item" data-aos="fade-left" data-aos-delay="300">
                 <span class="news-date">2025 年 0 月 0 日</span>
                 <span>テキスト テキスト テキスト テキスト</span>
             </div>
@@ -2193,13 +2163,13 @@
                     LiVS </div>
             </div>
             <div class="studio-content">
-                <h2 class="section-title studio-title fade-up"><span class="studio-s">S</span><span
+                <h2 class="section-title studio-title" data-aos="fade-up"><span class="studio-s">S</span><span
                         class="studio-tudio">TUDIO</span></h2>
-                <h3 class="section-subtitle fade-up">スタジオ案内</h3>
+                <h3 class="section-subtitle" data-aos="fade-up" data-aos-delay="100">スタジオ案内</h3>
             </div>
         </div>
         <div class="studio-content">
-            <p class="studio-description fade-up">
+            <p class="studio-description" data-aos="fade-right" data-aos-delay="200">
                 スタディオ・リヴス－那覇新都心で 24 時間 365 日営業中－<br>
                 モノレール古島駅から徒歩 2 分、古島交差点すぐそば。<br>
                 駐車場完備でアクセス抜群!<br>
@@ -2208,25 +2178,25 @@
                 今すぐご予約を！お気軽にお越しください！
             </p>
             <div class="studio-features">
-                <div class="feature-item slide-in-left">
+                <div class="feature-item" data-aos="fade-left" data-aos-delay="100">
                     <div class="feature-icon">
                         <img src="駅近2分.png" alt="駅近古島駅 徒歩2分">
                     </div>
                     <div class="feature-text">駅近古島駅 徒歩2分</div>
                 </div>
-                <div class="feature-item slide-in-left">
+                <div class="feature-item" data-aos="fade-left" data-aos-delay="200">
                     <div class="feature-icon-24h">
                         <img src="24h_open.png" alt="24時間 OPEN">
                     </div>
                     <div class="feature-text">24時間 OPEN</div>
                 </div>
-                <div class="feature-item slide-in-right">
+                <div class="feature-item" data-aos="fade-left" data-aos-delay="300">
                     <div class="feature-icon">
                         <img src="27333.png" alt="深夜割・早朝割有り">
                     </div>
                     <div class="feature-text">深夜割・早朝割有り</div>
                 </div>
-                <div class="feature-item slide-in-right">
+                <div class="feature-item" data-aos="fade-left" data-aos-delay="400">
                     <div class="feature-icon">
                         <img src="駐車場完備.png" alt="駐車場完備">
                     </div>
@@ -2234,22 +2204,22 @@
                 </div>
             </div>
             <div class="studio-gallery">
-                <div class="gallery-item fade-up">
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="100">
                     <img src="gall_1.png" alt="画像1">
                 </div>
-                <div class="gallery-item fade-up">
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="200">
                     <img src="gall_2.png" alt="画像2">
                 </div>
-                <div class="gallery-item fade-up">
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="300">
                     <img src="gall_3.png" alt="画像3">
                 </div>
-                <div class="gallery-item fade-up">
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="400">
                     <img src="gall_4.png" alt="画像4">
                 </div>
-                <div class="gallery-item fade-up">
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="500">
                     <img src="gall_5.png" alt="画像5">
                 </div>
-                <div class="gallery-item fade-up">
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="600">
                     <img src="gall_6.png" alt="画像6">
                 </div>
             </div>
@@ -2259,7 +2229,7 @@
     <!-- Price & Access Section -->
     <div class="price-access-container">
         <!-- Price Section -->
-        <section class="price fade-up" id="price">
+        <section class="price" id="price" data-aos="fade-right">
             <h2 class="section-title">
                 <img src="PRICE.png" class="title-icon" alt="Price Icon">
                 <span class="title-first">P</span>RICE
@@ -2273,7 +2243,7 @@
         </section>
 
         <!-- Access Section -->
-        <section class="access fade-up" id="access">
+        <section class="access" id="access" data-aos="fade-left" data-aos-delay="200">
             <h2 class="section-title">
                 <img src="ACCESS.png" class="title-icon" alt="Access Icon">
                 <span class="title-first">A</span>CCESS
@@ -2289,12 +2259,12 @@
     <!-- Promotional Section -->
     <section class="promotional">
         <div class="promotional-header">
-            <div class="on-air-badge fade-up">
+            <div class="on-air-badge" data-aos="zoom-in">
                 <img src="one_liv.png" alt="ON AIR" class="on-air-img">
             </div>
         </div>
         <div class="promotional-body">
-            <div class="promotional-content fade-up">
+            <div class="promotional-content" data-aos="fade-right" data-aos-delay="200">
                 <h2 class="promotional-title">
                     <span class="highlight">L</span>ife is <span class="highlight">V</span>ery <span
                         class="highlight">S</span>hort!!!!!!
@@ -2325,7 +2295,7 @@
 
     <!-- Studio Information Section -->
     <section class="studio-info">
-        <div class="studio-info-content fade-up">
+        <div class="studio-info-content" data-aos="fade-right">
             <h2 class="section-title"><span class="title-s">S</span>TUDIO <span class="title-i">I</span>NFORMATION
             </h2>
             <h3 class="section-subtitle">スタジオ案内</h3>
@@ -2347,12 +2317,12 @@
                 </div>
             </div>
         </div>
-        <div class="info-banner fade-up"><img src="広告画像.png" alt="24時間営業!! ネット予約! 始まる!!!"></div>
+        <div class="info-banner" data-aos="fade-left"><img src="広告画像.png" alt="24時間営業!! ネット予約! 始まる!!!"></div>
     </section>
 
     <!-- Footer -->
     <footer id="contact">
-        <div class="footer-map" aria-label="Google Map">
+        <div class="footer-map" aria-label="Google Map" data-aos="fade-up">
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.613018722494!2d139.69851030975485!3d35.66190487247917!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188ca87eba86d5%3A0xc878b2fe3fed54f0!2sTower%20Records%20Shibuya!5e0!3m2!1sen!2sin!4v1765896175884!5m2!1sen!2sin"
                 loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"
@@ -2360,14 +2330,14 @@
             </iframe>
         </div>
         <div class="footer-cta-container">
-            <a href="tel:080-3964-9023" class="sticky-btn">
+            <a href="tel:080-3964-9023" class="sticky-btn" data-aos="zoom-in" data-aos-delay="100">
                 <span class="sticky-btn-icon"><img src="tel_icon.png" alt="Phone"></span>
                 <div class="sticky-btn-content">
                     <span class="sticky-btn-title">080-3964-9023</span>
                     <span class="sticky-btn-subtitle">受付時間 12時-24時</span>
                 </div>
             </a>
-            <a href="#" class="sticky-btn">
+            <a href="#" class="sticky-btn" data-aos="zoom-in" data-aos-delay="200">
                 <span class="sticky-btn-icon"><img src="cal_time.png" alt="Calendar"></span>
                 <div class="sticky-btn-content">
                     <span class="sticky-btn-title">WEB予約</span>
@@ -2378,7 +2348,7 @@
     </footer>
 
     <!-- Sticky Bottom Bar -->
-    <div class="sticky-bottom-bar" id="stickyBar">
+    <div class="sticky-bottom-bar" id="stickyBar" data-aos="fade-up" data-aos-offset="0">
         <a href="tel:080-3964-9023" class="sticky-btn">
             <span class="sticky-btn-icon"><img src="tel_icon.png" alt="Phone"></span>
             <div class="sticky-btn-content">
@@ -2397,24 +2367,13 @@
 
     <script>
         // Soft Scroll Animation Observer
+        // AOS Initialization
         document.addEventListener('DOMContentLoaded', () => {
-            const observerOptions = {
-                root: null,
-                rootMargin: '0px',
-                threshold: 0.1
-            };
-
-            const observer = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                        observer.unobserve(entry.target); // Run only once
-                    }
-                });
-            }, observerOptions);
-
-            const fadeElements = document.querySelectorAll('.fade-up, .slide-in-left, .slide-in-right');
-            fadeElements.forEach(el => observer.observe(el));
+            AOS.init({
+                duration: 1000,
+                once: true,
+                offset: 100,
+            });
         });
 
         // Sticky bar hide on footer visible
@@ -2537,6 +2496,7 @@
             });
         });
     </script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 </body>
 
 </html>
